@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Self Tracky</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-pastel-blue">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96" style="background-color: #f8e8e8;">
+        <h1 class="text-2xl font-bold mb-6 text-center text-blue-700">Self Tracky</h1>
+        <h2 class="text-2xl font-bold mb-6 text-center text-grey-700">Login</h2>
+        <form action="#" method="POST">
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium">Email</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 bg-pastel-pink">
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700 font-medium">Password</label>
+                <input type="password" id="password" name="password" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 bg-pastel-pink">
+            </div>
+            <button type="submit" class="w-full bg-pink-400 text-white py-2 rounded-lg hover:bg-pink-500">Login</button>
+        </form>
+        <p class="text-center text-gray-600 mt-4">Don't have an account? <a href="#" class="text-pink-500">Sign up</a></p>
+    </div>
+</body>
+</html>
