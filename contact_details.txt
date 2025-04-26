@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+</head>
+<body>
+    <h3>XYZ University</h3>
+    <p><strong>Address:</strong> 123 University Lane, City, State, ZIP</p>
+    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+    <p><strong>Email:</strong> info@xyzuniversity.edu</p>
+    <p><strong>Affiliation:</strong> National University Board</p>
+</body>
+</html>

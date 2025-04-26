@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .calendar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .month {
+            width: 250px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .month-name {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .days-of-week {
+            display: flex;
+            justify-content: space-between;
+        }
+        .day {
+            width: 30px;
+            text-align: center;
+        }
+        .dates {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .date {
+            width: 30px;
+            text-align: center;
+            margin: 2px;
+        }
+        .date.empty {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Generate Calendar for a Year</h1>
+
+<!-- Input for year and a button to generate the calendar -->
+<input type="number" id="yearInput" placeholder="Enter Year" min="1900" max="2100">
+<button onclick="generateCalendar()">Generate Calendar</button>
+
+<div class="calendar" id="calendar"></div>
+
+<script>
+    function generateCalendar() {
+        const year = document.getElementById('yearInput').value;
+        const calendarContainer = document.getElementById('calendar');
+        calendarContainer.innerHTML = ''; // Clear previous calendar
+
+        if (!year || isNaN(year)) {
+            alert("Please enter a valid year.");
+            return;
+        }
+
+        // Loop through all 12 months
+        for (let month = 0; month < 12; month++) {
+            const monthName = getMonthName(month);
+            const monthContainer = createMonthCalendar(year, month, monthName);
+            calendarContainer.appendChild(monthContainer);
+        }
+    }
+
+    // Get the name of the month
+    function getMonthName(monthIndex) {
+        const months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+        return months[monthIndex];
+    }
+
+    // Create the calendar for a single month
+    function createMonthCalendar(year, month, monthName) {
+        const monthContainer = document.createElement('div');
+        monthContainer.className = 'month';
+
+        const monthTitle = document.createElement('div');
+        monthTitle.className = 'month-name';
+        monthTitle.textContent = `${monthName} ${year}`;
+        monthContainer.appendChild(monthTitle);
+
+        const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const daysOfWeekContainer = document.createElement('div');
+        daysOfWeekContainer.className = 'days-of-week';
+        daysOfWeek.forEach(day => {
+            const dayElement = document.createElement('div');
+            dayElement.className = 'day';
+            dayElement.textContent = day;
+            daysOfWeekContainer.appendChild(dayElement);
+        });
+        monthContainer.appendChild(daysOfWeekContainer);
+
+        // Get the first day of the month and the number of days in the month
+        const firstDay = new Date(year, month, 1).getDay();
+        const numDays = new Date(year, month + 1, 0).getDate();
+
+        // Create the dates container
+        const datesContainer = document.createElement('div');
+        datesContainer.className = 'dates';
+
+        // Add empty spaces before the first day of the month
+        for (let i = 0; i < firstDay; i++) {
+            const emptyDate = document.createElement('div');
+            emptyDate.className = 'date empty';
+            datesContainer.appendChild(emptyDate);
+        }
+
+        // Add the actual dates
+        for (let day = 1; day <= numDays; day++) {
+            const dateElement = document.createElement('div');
+            dateElement.className = 'date';
+            dateElement.textContent = day;
+            datesContainer.appendChild(dateElement);
+        }
+
+        monthContainer.appendChild(datesContainer);
+        return monthContainer;
+    }
+</script>
+
+</body>
+</html>

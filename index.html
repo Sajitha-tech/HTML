@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            background: #0044cc;
+            color: white;
+            padding: 15px;
+        }
+        .frame-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: calc(100vh - 80px);
+            gap: 10px;
+            padding: 10px;
+        }
+        .frame {
+            border: 2px solid #000;
+            padding: 10px;
+            overflow: auto;
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #0044cc;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Styling for the floating iframe */
+        .floating-frame {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 300px;
+            height: 200px;
+            border: 2px solid #0044cc;
+            background: #f9f9f9;
+            z-index: 1000;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .floating-frame h4 {
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+            background: #0044cc;
+            color: white;
+        }..l//.       .
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to XYZ Univer        msity</h1>
+        <p>Empowering Education and Innovation</p>
+    </header>
+    <div class="frame-container">
+        <div class="frame">
+            <h3>Departments</h3>
+            <a href="departments.html" target="_blank">View Departments</a>
+        </div>
+        <div class="frame">
+            <h3>Student Registration</h3>
+            <a href="student_registration.html" target="_blank">Register Now</a>
+        </div>
+        <div class="frame">
+            <h3>Library Book Details</h3>
+            <a href="library.html" target="_blank">View Library Details</a>
+        </div>
+        <div class="frame">
+            <h3>Student Grade Card</h3>
+            <a href="grade_card.html" target="_blank">View Grade Card</a>
+        </div>
+    </div>
+    <!-- Floating iframe -->
+    <div class="floating-frame">
+        <h4>Contact Details</h4>
+        <iframe src="contact_details.html" frameborder="0" width="100%" height="150px"></iframe>
+    </div>
+</body>
+</html>

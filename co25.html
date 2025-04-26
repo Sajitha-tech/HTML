@@ -1,0 +1,33 @@
+
+<html>
+<head>
+
+</head>
+<center>
+<h1> Changing image and text</h1>
+<body>
+<div id="content" onmouseover="onChange()" onmouseout="onReset()">
+<image src="ert.jpg" id="image">
+<p id="text"> India, officially the Republic of India, is a country in South Asia. It is the seventh-largest country in the world by area and the most populous country.</p>
+</div>
+<script>
+  function onChange()
+  {
+     document.getElementById('image').src='ert.jpeg';
+     document.getElementById('text').textContent='India is famous for its rich cultural heritage, historical monuments like the Taj Mahal, diverse cuisine, vibrant festivals, and spiritual destinations. The country natural landscapes, from the Himalayas to Keralas backwaters, and bustling cities like Delhi and Mumbai also attract numerous tourists.';
+     
+  }
+ 
+  function onReset()
+  {
+     document.getElementById('image').src='rep.jpeg';
+     document.getElementById('text').textContent='India, officially the Republic of India, is a country in South Asia. It is the seventh-largest country in the world by area and the most populous country.';
+     
+  }
+</script>
+
+</body>
+</center>
+<html>
+
+
