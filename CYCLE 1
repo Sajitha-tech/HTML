@@ -1,0 +1,283 @@
+ 
+Program code	:
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Simple HTML Example</title>
+</head>
+<body>
+
+<h1>Welcome to My Simple Page</h1>
+
+<h2>    <font color="blue">About IT Courses </font> </h2>
+<p> <font color="red" face="cursive">IT courses offer a comprehensive understanding of technology and its applications in various fields. .</font></p>
+
+<h2>Courses</h2>
+<ul>
+    <li>Web Development</li>
+    <li>Graphic Design</li>
+    <li>Software development</li>
+     <li>Cyber Security</li>
+</ul>
+
+<h2>Contact Us</h2>
+<p>Email: <a href="abcd12@hmail.com">tagsdemo.com</a></p>
+
+</body>
+</html>
+Output	:
+ 
+ 
+Program code	:
+
+<html>
+<head>
+
+<body>
+<center><h2><font color="red">BIO DATA</font></h2>
+
+
+<style>
+p {color:indigo;}
+body {background:LavenderBlush;}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+
+  
+}
+</style>
+<img src="bio.jpeg">
+<hr align="center" size="3" width="25%">
+NAME : SAJITHA TS<br><br>
+PLACE :THRISSUR<br><br>
+DATE OF BIRTH :12-03-2003<br><br>
+
+QUALIFICATION :<ul.center>
+<li>&nbspMCA</li>
+<li>&nbspBSc CS</li>
+<li>&nbspPlus Two</li>
+<li>10th</li>
+</ul>
+<table border="1">
+<tr>
+<th>COURSE</th>
+<th>YEAR</th>
+<th>INSTITUSION</th>
+</tr>
+<tr>
+<td>MCA</td>
+<td>2024</td>
+<td>FISAT</td>
+</tr>
+<td>BSc CS</td>
+<td>2021</td>
+<td>LF</td>
+</tr>
+</table>
+
+<br>
+Email :<font color="blue">abcd@gmail.com</font>
+<br>
+<br>
+For more details :<a href="sample.html">Click here</a>
+<br>
+<hr align="center" size="3" width="25%">
+</center>
+</body>
+</html>
+
+Output	:
+
+ 
+
+
+ 
+
+Program code	:
+
+<html>
+<head>
+
+    <title>Simple Mixed Frame Example</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+
+        .nav {
+            width: 200px;
+            background-color: #FFFAFA;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            position: relative;
+            background-color: #8FBC8F;
+        }
+
+       
+        iframe.floating-frame {
+            position: absolute;
+            bottom: 40px;
+            right: 80px;
+            width: 400px;
+            height: 300px;
+            border: 2px solid blue;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="nav">
+            <h2>Menu :</h2>
+            <ul>
+                <li><a href="https://example.com" target="contentFrame">Home</a></li>
+                <li><a href="https://example.com/about" target="contentFrame">About</a></li>
+                <li><a href="https://example.com/contact" target="contentFrame">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>Welcome to Frames :</h1>
+            <p><i>In HTML, frames are used to divide a webpage into multiple sections, each capable of loading separate HTML documents. While frames were popular in earlier web development,
+             they have become largely deprecated in HTML5</i>.</p>
+
+            <!-- Floating iframe -->
+            <iframe class="floating-frame" src="https://www.w3schools.com" title="Floating Frame"></iframe>
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+Output	:
+ 
+
+
+ 
+          Program  code         :
+<html>
+<head>
+<style>
+h1 {
+   background-color: white;
+  text-decoration-line: underline;
+  font-size: 30px
+}
+p.d {border-style: double; font-size: 20px;}
+</style>
+<link rel="stylesheet" href="stl.css">
+</head>
+<body>
+
+<h1 style="text-align:center;">Artificial Intelligence</h1><br><br>
+<p class="d">Artificial intelligence is a field of science concerned with building computers 
+and machines that can reason, learn, and act in such a way that would normally 
+require human intelligence or that involves data whose scale exceeds what humans can analyze.
+
+</p>
+
+</body>
+</html>
+stl.css:
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+
+
+
+Output	:
+
+ 
+
+ 
+Program code	:
+<html><head>
+<title>REG FORM </title></head>
+<body>
+<style>
+p {color:indigo;}
+body {background:LavenderBlush;}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  margin-left:40%;
+  
+}
+</style>
+
+<h2 style="color:Maroon"><center>REGISTRATION FORM</center></h2>
+<img src="icon.png">
+<br><br>
+<center><button type="submit">Upload Photo</button></center>
+
+<form>
+<p>
+FIRST NAME : <input type="text" name="name"><br><br> LAST NAME : <input type="text" name="name"><br><br><br><br>
+ADDRESS :<br> <textarea name="address" rows="4"></textarea><br><br>
+
+GENDER :
+<br>
+<br>
+male<input type="radio" name="gender">&nbsp
+female<input type="radio" name="gender"><br><br>
+Email :<input type="text"><br><br>
+
+Hobbies :<br><input type="checkbox" values="reading">Reading<br>
+<input type="checkbox" values="Crafting">Crafting<br>
+<input type="checkbox" values=drawing>Drawing<br><br>
+Qualification:
+<select  name="course">
+<option>MCA</option>
+<option>BSC CS</option>
+<option>PLUS TWO</option>
+<option>SSLC</option>
+<br>
+
+</select><br><br>
+
+<button type="submit">Submit</button>
+
+</p>
+</form>
+</body>
+</html>
+Output	:
+ 
